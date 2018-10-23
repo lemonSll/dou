@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>斗地主</title>
+	<script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./js/game.js"></script>
+	<script type="text/javascript" src="./js/tips.js"></script>
+	<link rel="stylesheet" href="css/index.css" type="text/css"/>
+</head>
+<body>
+	<div class="bg_wrap"></div>
+	<!-- 游戏界面 -->
+	<img id="frist" src="images/666.png" alt="">
+	<img id="frist2" src="images/666.png" alt="">
+	<img id="frist3" src="images/666.png" alt="">
+	<img id="frist4" src="images/666.png" alt="">
+
+	<img class="bj" id="bj" src="images/132.jpg" alt="">
+	<div class="logo">
+		<!-- <ul class="txt">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul> -->
+	</div>
+	<div class="start" id="start"></div>
+	<div class="jy" id="jy" style="z-index:120;"></div>
+	<!-- <div class="about" id="about"></div> -->
+
+	<div class="midt">
+		<input class="bgn" type="button" name=""><br>
+		<input class="stop" type="button" name="">
+	</div>
+	<a class="fg" href="#"></a>
+
+	<!-- 图标 -->
+	<ul class="icon">
+		<li class="icon_shop"></li>	
+	    <li class="icon_task"></li>
+	    <li class="icon_active"></li>
+	    <li class="icon_4"></li>
+		<li class="icon_5"></li>
+	</ul>
+
+	<div class="left">
+		<div class="mid_role"></div>
+		<ul class="play_1 play">
+			<!-- <li style="width: 125px; height: 175px; background: url(./images/14.png) -162px -5px;"></li> -->
+		</ul>
+		<p class="play_btn">
+			<span class="timer1"></span>
+			<input class="get" type="button" name="" value="抢地主"><br><br>
+			<input class="cancel" type="button" name="" value="不抢">
+		</p>
+		<p class="play_btn2">
+			<span class="timer2"></span>
+			<input class="play_out" type="button" name="" value="出牌"><br><br>
+			<input class="pass" type="button" name="" value="不出"><br><br>
+			<input class="tips" type="button" name="" value="提示">
+		</p>
+		<div class="branch" style="top: 370px; left: 0px"></div>
+        <span id="sp1"><div id="do"></div>积分:9000</span>
+	</div>
+
+	<div class="mid">
+		<div class="mid_top">
+			<ul class="all_poker">
+				<!-- <li class="back"></li> -->
+			</ul>
+		</div>
+		<div class="mid_desktop">
+			<ul class="desktop_poker">
+				<!-- <li style="width: 125px; height: 175px; background: url(./images/14.png) -162px -5px;"></li> -->
+			</ul>
+		</div>
+		<div class="mid_end">
+			<div class="mid_role"></div>
+			<ul class="play_2 play">
+				 <!--<li style="width: 125px; height: 175px; background: url(./images/14.png) -162px -5px;"></li>
+				<li class="select" style="width: 125px; height: 175px; background: url(./images/14.png) -162px -5px;"></li> -->
+			</ul>
+			<p class="play_btn">
+				<span class="timer1"></span>
+				<input class="get" type="button" name="" value="抢地主">
+				<input class="cancel" type="button" name="" value="不抢">
+			</p>
+			<p class="play_btn2">
+				<span class="timer2"></span>
+				<input class="play_out" type="button" name="" value="出牌">
+				<input class="pass" type="button" name="" value="不出">
+				<input class="tips" type="button" name="" value="提示">
+			</p>
+			<div class="branch" style="top: 840px; left: 115px"></div>
+            <span id="sp2"><div id="do"></div>积分:9000</span>
+		</div>
+	</div>
+
+	<div class="right">
+		<div class="mid_role"></div>
+		<ul class="play_3 play">
+			<!-- <li style="width: 125px; height: 175px; background: url(./images/14.png) -162px -5px;"></li> -->
+		</ul>
+		<p class="play_btn">
+			<span class="timer1"></span>
+			<input class="get" type="button" name="" value="抢地主"><br><br>
+			<input class="cancel" type="button" name="" value="不抢">
+		</p>
+		<p class="play_btn2">
+			<span class="timer2"></span>
+			<input class="play_out" type="button" name="" value="出牌"><br><br>
+			<input class="pass" type="button" name="" value="不出"><br><br>
+			<input class="tips" type="button" name="" value="提示">
+		</p>
+		<div class="branch" style="top: 370px; right: 0px;"></div>
+        <span id="sp3"><div id="do"></div>积分:9000</span>
+	</div>
+	<div class="alertMsg">
+		<p class="titl">系统提示</p>
+		<div class="msg"></div>
+		<input type="text" class="btn_ok" value="确定">
+	</div>
+	<!-- 结局框 -->
+	<div class="alertWind">
+		<div class="btn_again"></div>
+		<div class="btn_close"></div>
+	</div>
+
+	<div class="alertWinn">
+		<div class="btn_again"></div>
+		<div class="btn_close"></div>
+	</div>
+    <!--音乐音效-->
+	<div class="music" >
+		<audio src="./music/背景.mp3" autoplay loop></audio>
+	    <audio src="" autoplay></audio> 
+	</div>
+	<!--游戏动画-->
+	<div id="effects">
+	    <div class="straight"></div>
+	    <div class="evenOn"></div>
+	    <div class="plane"></div>
+	    <div class="bomb"></div>
+	    <div class="floor"></div>
+	    <div class="bombKing"></div>
+	</div>
+	<!-- 小人 -->
+	<div class="people"></div>
+
+</body>
+</html>
